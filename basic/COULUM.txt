@@ -1,0 +1,30 @@
+'ProgramMode:RUN
+
+"--=== VECTOR 0 ===-"
+"X_#E5CD_"?->X
+"Y_#E5CD_"?->Y
+"Z_#E5CD_(2D=0)"?->Z
+"Q_#E5CD_(C)"?->C
+
+[[X][Y][Z]]->Vct A
+
+"--=== VECTOR 1 ===--"
+"X_#E5CE_"?->X
+"Y_#E5CE_"?->Y
+"Z_#E5CE_(2D=0)"?->Z
+"Q_#E5CE_(C)"?->D
+
+[[X][Y][Z]]->Vct B
+
+8.98755Exp9->K
+
+Vct B-Vct A->Vct E
+Norm(Vct E)->F
+Vct E/Abs (F)->Vct G
+
+K*((C*D)/F^<2>)->W
+(Vct E/Abs F)->Vct V
+
+"MAGNITUD (N)"
+WDisps
+(K*(C*D)/(F^<2>))*Vct GDisps

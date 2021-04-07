@@ -1,0 +1,99 @@
+'ProgramMode:RUN
+"INGRESAR DATOS?"
+" - 1:YES"
+" - 2:NO "
+
+?->X
+
+If X=1
+Then Goto 1
+Else If X=2
+Then Goto 2
+Else 
+Goto 3
+IfEnd
+
+Lbl 1
+
+ClrText
+
+"----= punto A =----"
+"X:"?->X
+"Y:"?->Y
+"Z:"?->Z
+
+[[X][Y][Z]]->Mat A
+
+ClrText
+
+"----= vector U =---"
+"X:"?->X
+"Y:"?->Y
+"Z:"?->Z
+
+[[X][Y][Z]]->Mat U
+
+ClrText
+
+"----= punto B =----"
+"X:"?->X
+"Y:"?->Y
+"Z:"?->Z
+
+[[X][Y][Z]]->Mat B
+
+ClrText
+
+"----= vector V =---"
+"X:"?->X
+"Y:"?->Y
+"Z:"?->Z
+
+ClrText
+
+[[X][Y][Z]]->Mat V
+
+Lbl 2
+ClrText
+
+'DETERMINANTE:'
+Mat B-Mat A->Mat C
+
+Augment(Mat U,Mat V)->Mat E
+
+Trn Augment(Mat C,Mat E)->Mat D
+
+Det Mat D->D
+
+Trn Augment([[1][1][1]],Mat E)->Mat F
+
+Augment(Mat F,Mat F)->Mat F
+
+1->X
+1->Y
+1->Z
+
+1->W
+1->V
+1->U
+
+For 1->A To 3
+
+Mat F[A,A]*X->X
+Mat F[A,A+1]*Y->Y
+Mat F[A,A+2]*Z->Z
+
+Mat F[A,5-A]*W->W
+Mat F[A,6-A]*V->V
+Mat F[A,7-A]*U->U
+Next
+
+X-W->X
+Y-V->Y
+Z-U->Z
+
+"DISTANCIA:"
+
+Abs D/Norm([[X][Y][Z]])
+
+Lbl 3

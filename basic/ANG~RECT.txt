@@ -1,0 +1,28 @@
+'ProgramMode:RUN
+"----= RECTA A =----"
+"X:"?->X
+"Y:"?->Y
+"Z:"?->Z
+
+[[X][Y][Z]]->Mat A
+
+"----= RECTA B =----"
+"X:"?->X
+"Y:"?->Y
+"Z:"?->Z
+
+[[X][Y][Z]]->Mat B
+
+0->A
+
+For 1->I To 3
+
+Mat A[I,1]*Mat B[I,1]+A->A
+Next
+
+Norm(Mat A)*Norm(Mat B)->B
+
+Abs A->A
+
+"ANGULO: "
+cos^-1 (A/B)

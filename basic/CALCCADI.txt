@@ -1,0 +1,19 @@
+'ProgramMode:RUN
+"---------------------CALCULAR CAPACITANCIA   DE UN MATERIAL    ---------------------"
+
+'P.RELATIVA
+
+"PERMITIVIDAD(_#E644__@E772_)"?->P
+"AREA(_@E76D__#E5C2_)"?->A
+"SEPARACION(_@E76D_)"?->D
+
+'P.E. VACIO
+'_#E644__#E5CD__#E6B4_ 8.85_Exp__#E5CA__#E5C2_
+
+'_#E644__@E772__#E644__#E5CD_
+P*(8.8541Exp-12)->J
+""
+"-------OUTPUT--------"
+""
+"FARADIOS:"
+J*(AfracD)
