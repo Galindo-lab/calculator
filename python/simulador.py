@@ -54,6 +54,7 @@ res = 0
 coe = 0
 temp_fin = 0
 temp_ini = 0
+custom = 0
 
 
 while(1):
@@ -100,14 +101,20 @@ while(1):
             print("| %2d | %10s | %.3e |" % (i,key, Resistividad[key]) )
             i += 1
         print("+----+------------+-----------+\n")
+        print("Escribe \"custom\" para añadir un material personalizado")
 
-        res_id = int(input("Material (id) : "))
-        resistividad = Resistividad[Materiales[res_id]]
+        res_id = input("Material (id) : ")
+
+        if( res_id.lower() == "custom" ):
+            resistividad = float(input("Valor de resistividad: "))
+        else:
+            resistividad = Resistividad[Materiales[ int(res_id) ]]
+
         longitud = float(input(" Longitud (m) : "))
         area = float(input("    Área (m²) : "))
 
         print("----------------------------------")
-        print("Resistencia(\u03A9): %.5e \n"%( resistividad * longitud / area ))
+        print("Resistencia(\u03A9): ", ( resistividad * longitud / area ))
         input("Pulsa cualquier tecla para continuar...")
 
     elif(op == 0):
