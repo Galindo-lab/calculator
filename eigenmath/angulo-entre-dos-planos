@@ -1,0 +1,12 @@
+# ANGULO ENTRE DOS PLANOS
+# 
+# -97x + 5y - 56z = 13 <- esto se ignora
+# -54x - 49y - 20 = -39 <- este tambien
+
+n1 = (-97, 5, -56)
+n2 = (-54, -49, -20)
+
+arccos((abs( dot(n1,n2) ) ) / ( abs(n1) * abs(n2) ) )
+
+"Angulo entre los dos planos:"
+float

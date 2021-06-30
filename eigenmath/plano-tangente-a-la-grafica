@@ -1,0 +1,28 @@
+
+# Plano Tangente A La Gráfica
+
+f = -34*x^2 - 39*x*y - 42*y^2 - 80*x + 90*y - 31
+
+p = (-29, -89)
+
+"Gradiente"
+df = d( f, (x,y) )
+df
+
+"Gradiente Evaluado"
+ge = eval(df,x,p[1],y,p[2])
+ge
+
+"Funciona Evaluada"
+fe = eval(f,x,p[1],y,p[2])
+fe
+
+"Resultado, NOTE: recuerda que la ecuacion es:"
+"."
+"    z - f = 'f * [ ( x, y) - ( x0, y0) ]"
+"."
+z - fe
+" = "
+dot( ge, (( x, y) - p))
+
+exit

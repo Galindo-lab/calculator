@@ -1,0 +1,32 @@
+
+# funcion --------------------------------------------------
+
+r = (  1+5*t,
+       5+3*t^2, 
+       5 )
+
+# valor de t -------------------------------------------------
+tv = 0
+
+"Funcion:"
+r
+rt = d(r, t)
+rtt = d(rt, t)
+rttt = d(rtt, t)
+rr = simplify(sqrt( rt[1]^2 + rt[2]^2 + rt[3]^2 ))
+
+"Rapidez (speed):"
+rr
+eval(rr, t, 0) 
+
+"Velocidad (velocity):"
+rt
+eval(rt, t, 0)
+
+"Aceleracion (acceleration):"
+rtt
+eval(rtt, t, 0)
+
+"Sobreaceleración (jerk):"
+rttt
+eval(rttt, t, 0)

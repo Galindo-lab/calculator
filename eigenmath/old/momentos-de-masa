@@ -1,0 +1,27 @@
+
+
+    "radio de giro"
+
+fxy = 1
+
+
+    # Orden de las integrales
+
+oi = (x,y)
+
+    # Limites de las integrales
+
+#primera integral, <inicio, final>
+a = (0,1)
+
+#segunda integral, <inicio, final>
+b = (0,2)
+
+  # inicio integrales dobles
+
+yf = y*fxy
+yf
+yf = defint(yf,oi[1],a[1],a[2])
+yf
+yf = defint(yf,oi[2],b[1],b[2])
+yf

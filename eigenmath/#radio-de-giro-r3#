@@ -1,0 +1,41 @@
+# Radio De Giro R3
+
+"Funcion"
+f = z
+f
+
+"Eje De Giro"
+eje = z
+eje
+
+"Orden De Las Integrales"
+as = (x,y,z)
+as
+
+"limites de integracion" # <inicio, final>
+lt = ( (0, y^(1/3)) ,
+       (0, 5),v
+       (0, 49) ) 
+lt
+
+#----------------------------------------------------------------------------
+
+"Masa"
+m = f
+# integral triple consecutiva
+for(a,1,3,k=a, m = defint( m, as[k], lt[k,1], lt[k,2]))
+m
+float
+
+"Momento De Inercia (Segundo Momento)"
+mi = f * ( (eje==x)*(y^2+z^2) + (eje==y)*(x^2+z^2) + (eje==z)*(y^2+x^2)  )
+mi
+for(a,1,3,k=a, mi = defint( mi , as[k], lt[k,1], lt[k,2]))
+mi
+float
+
+"Radio De Giro"
+simplify(sqrt(mi/m))
+float
+
+exit

@@ -1,0 +1,19 @@
+
+# Divergencia
+
+f = ( sin(x), cos(y), z^2)
+f
+
+xv = 76
+yv = -58
+zv = 54
+
+# aplicar matriz jacoviana
+"hessiana"
+h = d(f, (x,y,z))
+h
+
+o = h[1,1] + h[2,2] + h[3,3]
+
+float(do( x=xv, y=yv, z=zv, o ))
+do( x=xv, y=yv, z=zv, o )

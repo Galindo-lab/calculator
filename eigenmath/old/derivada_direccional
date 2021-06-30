@@ -1,0 +1,38 @@
+
+"derivada direccional"
+
+                                    # valor de a funcion
+f = 4*x+x*y^2-5*y
+                                    # xv es coordenada
+xv = ( 3.6, -1.5 )
+                                    # valor de u, direccion 
+uv = ( -0.8410404608 , 0.5409722204 )
+                                    # valor de t
+tv = 0
+
+"funcion:"
+f                                   # mostrar la funcion 
+
+"Vectores:"
+xv 
+uv
+
+xpu = xv + t * uv                   # x + t*u 
+
+# reasigancion, x es el componente 1
+x = xpu[1]
+# y es e l componente 2
+y = xpu[2]
+
+# ahora que los valores han sido sustituidos
+
+f = d(f,t)                          # derivada de f con respecto a t
+t = tv                              # sustituimos t
+
+"resultado simbolico:"
+f
+
+"resultado numerico: "
+float(f)
+
+

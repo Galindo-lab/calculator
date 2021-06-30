@@ -1,0 +1,25 @@
+	
+"funcion"
+f =  -25*x^2 + 43*x*y - 64*y^2 - 18*x*z + 46*y*z + 17*z^2 - 2x - 45*y - 69*z - 15
+f
+
+p0 = ( -33, -86, -6 )
+p0
+
+"gradiente"
+g = d(f,(x,y,z))
+g
+
+x = p0[1]
+y = p0[2]
+z = p0[3]
+
+"evaluacion de la gradiente"
+g
+
+"gradiente evaluada"
+((xc, yc, zc) - p0)
+
+"producto punto"
+dot( ((xc, yc, zc) - p0), g )
+

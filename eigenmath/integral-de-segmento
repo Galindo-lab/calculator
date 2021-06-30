@@ -1,0 +1,32 @@
+# Integral De Segmento De Recta
+
+"Funcion"
+fv = ( (2x-3y), (-3*x+4*y-8) )
+fv
+
+"Puntos de la linea"
+p1 = (69,94)
+
+p2 = (32,72)
+
+p1
+p2
+
+"Funcion Parametrica"
+fp = p1 - t*(p2 - p1)
+fp
+
+x = fp[1]
+y = fp[2]
+
+"Derivada De Funcion Parametrica"
+d(fp,t)
+
+"Producto Punto"
+dp = dot( fv , d(fp,t) )
+dp
+
+"Integral Definida Entre [0,1]"
+integral(dp,t)
+defint(dp,t,0,1)
+

@@ -1,0 +1,13 @@
+# PLANO EQUIDISTANTE A DOS PUNTOS
+
+p1 = (-89,-33,66)
+p1
+p2 = (-1,-13,7)
+p2
+
+p1a = (p1 - (x,y,z))^2
+p2a = (p2 - (x,y,z))^2
+
+p1a-p2a
+
+exit

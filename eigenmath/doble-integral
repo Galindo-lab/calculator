@@ -1,0 +1,19 @@
+
+"Integrales dobles"
+
+#funcion
+fxy = x^2+y^2
+#primera integral, <inicio, final>
+a = (0,1)
+#segunda integral, <inicio, final>
+b = (0,1)
+
+"funcion original"
+fxy
+"integral de y"
+fxy = defint(fxy,y,a[1],a[2])
+fxy
+simplify
+"integral de x"
+fxy = defint(fxy,x,b[1],b[2])
+fxy

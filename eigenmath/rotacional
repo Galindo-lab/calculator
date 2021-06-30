@@ -1,0 +1,27 @@
+
+" Rotacional "
+
+f = ( ( (x^2+y^2+z^2)^(1/2) ), ( (x^2+y^2+z^2)^(1/2) ), ( (x^2+y^2+z^2)^(1/2) ) )
+f
+
+vx = 87
+vy = 37
+vz = 63
+
+vx
+vy
+vz
+
+p = f[1]
+q = f[2]
+r = f[3]
+
+a = ( d(r,y) - d(q,z) , d(p,z) - d(r,x) , d(q,x) - d(p,y) )
+"Ecuacion: "
+a
+simplify
+a
+"Valores: "
+
+do(x = vx, y = vy, z = vz, a )
+float(a)

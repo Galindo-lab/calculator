@@ -1,0 +1,19 @@
+# DISTANCIA ENTRE DOS RECTAS NO PARALELAS
+#
+#       de las rectas 
+#
+#  13t - 56      -88s + 92
+#  23t + 30   y   94s - 46
+# 132t + 37       98s + 71
+   
+r1 = ( (13,23,132), (-56,30,37) )
+r2 = ( (-88,94,98), (92,-46,71) )
+
+r1
+r2
+
+nu = abs(dot(r2[2]-r1[2], cross( r1[1] , r2[1])))
+de = abs(cross(r1[1],r2[1])
+
+"Distancia entre dos rectas: "
+nu/de

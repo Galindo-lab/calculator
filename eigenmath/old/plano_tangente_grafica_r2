@@ -1,0 +1,18 @@
+
+"funcion"
+f = 18*x^3 -70*x^2*y -75*x*y^2 -70*y^3 +9*x^2 -39*x*y +17*y^2 -56*x +0*y -7
+f
+
+"punto"
+p0 = (53, -71)
+p0
+
+"gradiente"
+g = d(f,(x,y))
+g
+
+
+dot(do(x=p0[1], y=p0[2], g ) , ((xx , yc) - p0 )) - (z - do(x=p0[1],y=p0[2],f) )
+
+
+

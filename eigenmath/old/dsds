@@ -1,0 +1,27 @@
+
+"Matriz hessiana"
+f = 44*x^2*y + 69*x*y^2 - 99*x*y + 73
+f
+
+"Gradiente"
+g = d(f, (x,y,z))
+g
+
+"incognitas"
+fx = d(f,x)
+fx
+fy = d(f,y)
+fy
+
+fxx = d(fx,x)
+fxx
+fyy = d(fy,y)
+fyy
+fxy = d(fx,y)
+fxy
+fyx = d(fy,x)
+
+# aplicar matriz jacoviana
+"hessiana"
+j = d(g, (x,y,z))
+j

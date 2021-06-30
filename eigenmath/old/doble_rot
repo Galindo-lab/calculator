@@ -1,0 +1,33 @@
+
+
+" Rotacional "
+
+#doble rotacional
+"Ecuacion: "
+f = ( 0, x*y, -x*z )
+f
+
+"punto:"
+vx = -54
+vy = 26
+vz = -73
+
+vx
+vy
+vz
+
+p = f[1]
+q = f[2]
+r = f[3]
+
+"primera rotacional: "
+a = ( d(r,y) - d(q,z) , d(p,z) - d(r,x) , d(q,x) - d(p,y) )
+a
+f = (a[1],a[2],a[3])
+"segunda rotacional: "
+a = ( d(r,y) - d(q,z) , d(p,z) - d(r,x) , d(q,x) - d(p,y) )
+a
+
+"Valores: "
+
+do(x = vx, y = vy, z = vz, a )

@@ -1,0 +1,36 @@
+
+# Maximos y minimos
+
+# Maximos y minimos
+"Funcion"
+f = 25*x^2*y + 76*x*y^2 + 9*x*y - 50
+f
+
+# Gradiente 
+fd = d( f, (x,y) )
+
+# Matriz Hessiana (Matriz Jaconiana Del Gradiente)
+fdd = d( fd, (x,y) )
+
+"1. Gradiente (resolver como sistema de ecuaciones)"
+fd = d( f, (x,y) )
+fd
+
+"2. Matriz Hessiana" # (Matriz Jaconiana Del Gradiente)
+fdd = d( fd, (x,y) )
+fdd
+
+"valores propios"
+x = -3/25
+y = -3/76
+fdd
+lambda*unit(2)-fdd
+det(lambda*unit(2)-fdd)
+float
+
+"3. evaluamos en la matriz heassiana los valores que obtuvimos en el sistema de ecuaciones 1."
+
+"4. evaluamos los puntos en ka matriz Hessiana y calculamos los determinantes"
+" Sí a  "
+
+exit

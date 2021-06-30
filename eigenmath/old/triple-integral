@@ -1,0 +1,24 @@
+
+"Integrales triples"
+
+#funcion
+fxyz = exp(x)*(y+2*z)
+#primera integral, <inicio, final>
+a = (0,x+y)     
+#segunda integral, <inicio, final>
+b = (0,x)     
+#tercera integral, <inicio, final>
+c = (0,2)
+
+"funcion original"
+fxyz
+"integral de z"
+fxyz
+fxyz = defint(fxyz,z,a[1],a[2])  
+"integral de y"
+fxyz = defint(fxyz,y,b[1],b[2])  
+fxyz
+"integral de x"
+fxyz = defint(fxyz,x,c[1],c[2])
+fxyz
+float

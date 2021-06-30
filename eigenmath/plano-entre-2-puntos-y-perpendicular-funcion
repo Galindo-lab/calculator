@@ -1,0 +1,45 @@
+# PLANO ENTRE 2 PUNTOS Y PERPENDICULAR A EL PLANO DE UNA FUNCION
+
+# puntos
+a = (64, 60, 34)
+b = (82, 16,-42)
+
+
+#funcion 
+f = -43*x - 9*y - 56*z - 4
+
+# ----------------------------------------------------------------------------
+"* puntos *"
+a
+b
+
+"* plano entre los puntos *"
+ab = b-a
+ab
+
+"* determinar Vector de la funcion F *"
+n1 = f
+f
+r1 = eval(f,x,0,y,0,z,0)
+n1 = ( eval(f,x,1,y,0,z,0) - r1 ,
+       eval(f,x,0,y,1,z,0) - r1 ,
+       eval(f,x,0,y,0,z,1) - r1 )
+n1
+
+"* Determinar Vector perpendicular *"
+n2 = ( (x,y,z), n1, ab )
+n2
+"* Determinante *"
+n2 = det(n2)
+n2
+"* Vector *"
+r2 = eval(n2,x,0,y,0,z,0)
+n2 = ( eval(n2,x,1,y,0,z,0) - r2 ,
+       eval(n2,x,0,y,1,z,0) - r2 ,
+       eval(n2,x,0,y,0,z,1) - r2 )
+
+n3 = ( (x,y,z) - a )
+n3
+
+"* Plano *"
+n2[1]*(n3[1]) + n2[2]*(n3[2]) + n2[3]*(n3[3])

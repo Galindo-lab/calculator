@@ -1,0 +1,23 @@
+
+" Rotacional "
+
+
+f = cross( (y*z)/(y-z), (x*z)/(x-z), (x*y)/(x-y) )
+f
+
+vx = -10
+vy = -81
+vz = -41
+
+p = f[1]
+q = f[2]
+r = f[3]
+
+a = ( d(r,y) - d(q,z) , d(p,z) - d(r,x) , d(q,x) - d(p,y) )
+"Ecuacion: "
+a
+
+"Valores: "
+
+do(x = vx, y = vy, z = vz, a )
+float(a)

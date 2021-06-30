@@ -1,0 +1,50 @@
+# Radio De Giro R2
+
+"Funcion"
+f = 1
+f
+
+"Eje De Giro" # x,y,o (origen)
+eje = x
+eje
+
+"Orden De Las Integrales"
+as = (x,y)
+as
+
+"limites de integracion" # <inicio, final
+lt = ((  0, 98-y  ),
+      (  0, 98  )) 
+lt
+
+#----------------------------------------------------------------------------
+
+"Masa"
+m = f
+# integral doble consecutiva
+for(a,1,2,k=a, m = defint(m,as[k],lt[k,1],lt[k,2]))
+m
+float
+
+" ----- Momentos De Inercia (Segundo Momento) ----- "
+
+Ix = f * (y^2)
+"            f*(y^2) =" + Ix
+for(a,1,2,k=a, Ix = defint(Ix,as[k],lt[k,1],lt[k,2]))
+"   integral f*(y^2) =" + float(Ix)
+
+Iy = f * (x^2)
+"            f*(x^2) =" + Iy
+for(a,1,2,k=a, Iy = defint(Iy,as[k],lt[k,1],lt[k,2]))
+"   Integral f*(x^2) =" + float(Iy) 
+
+
+I0 = Ix + Iy
+"Momento De Giro Respecto Al Origen =" + float(I0)
+
+" ----- Radio De Giro ----- "
+test(eje=x, "respecto x:" + float(simplify(sqrt(Ix/m))) )
+test(eje=y, "respecto y:" + float(simplify(sqrt(Iy/m))) )
+test(eje=o, "respecto o:" + float(simplify(sqrt(I0/m))) )
+
+exit

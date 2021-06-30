@@ -1,0 +1,33 @@
+# Divergencia
+
+"Calcular Divergencia"
+
+#funcion
+#f = cross( (1,3x,2y), (x,-y,z) )
+f = ( exp(x)*sin(y), -exp(x)*cos(y), z^2 )
+f
+
+#valore de x y z
+vx = 9.2
+vy = -1
+vz = 82
+
+p = f[1]
+q = f[2]
+r = f[3]
+
+"resultado ecuacion: "
+a = d(p,x)+d(q,y)+d(r,z)
+a
+
+x = vx
+y = vy
+z = vz
+
+"valores de la variables: "
+x
+y
+z
+
+"Resultado numerico:"
+float(a)
