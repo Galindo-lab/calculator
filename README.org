@@ -8,7 +8,7 @@ Programas que hago para mis calculadoras:
 + Casio BASIC
 + KhiCas
 + Eigenmath
-+ python (Necesito ajustalos)
++ python (Necesito ajustarlos)
 
 * Calculadoras
 Actualmente tengo dos calculadoras
