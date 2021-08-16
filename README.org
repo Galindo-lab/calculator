@@ -1,0 +1,17 @@
+
+#+TITLE: Cálculo Multivariable
+#+SUBTITLE: Apuntes
+
+* Informacion
+Programas que hago para mis calculadoras:
+
++ Casio BASIC
++ KhiCas
++ Eigenmath
++ python (Necesito ajustalos)
+
+* Calculadoras
+Actualmente tengo dos calculadoras
+
++ Casio fx-82ms
++ Casio fx-CG50

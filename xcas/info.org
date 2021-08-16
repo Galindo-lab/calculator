@@ -1,0 +1,9 @@
+
+#+TITLE: Cálculo Multivariable
+#+SUBTITLE: Apuntes
+
+* Informacion
+Los programas los guardo en formato texto para hacerlos los mas portables posible, pero la calcula solo los puede ejecutar en el formato .xw.
+
+* Programas
+- plano :: Programa para calcular un plano con 3 puntos en el plano.
