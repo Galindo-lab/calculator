@@ -13,6 +13,16 @@ _suffix_lookup = {
     'a': 1e-18,
 }
 
+def input_ing2():
+    x = input().split();
+    if len(x) > 0:
+        if len(x) > 1 and x[1] in _suffix_lookup:
+            return float(x[0]) * _suffix_lookup[x[1]]
+        else:
+            return float(x[0])
+    else:
+        return None
+
 def input_ing(message=""):
     x = input(message).split();
     try:
