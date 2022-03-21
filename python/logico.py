@@ -14,34 +14,49 @@ def binary(n):
     # genera una lista con los numeros binarios de 'n' bits
     return [bin(i,n) for i in range(0,1<<n)]
 
-def generate_values(variables, value):
-    # divide el strig en cantidad de variables
-    keys = variables.split(",")
-    # mismas claves pero con una 'n' al inicio
-    neg_keys = [ 'n' + x for x in keys ]
-    # extrae el valor individual de cada bit
-    values = [ bool(int(x)) for x in value ]
-    # valores negados
-    neg_values = [ not x for x in values ]
-    # retorna un diccionario
-    return dict(zip(keys+neg_keys+["n"],values+neg_values+[lambda x: not x]))
+def positive_values(variables, values): # string a diccionario
+    keys = [ char for char in variables ]
+    values = [ bool(int(char)) for char in values ]
+    return dict(zip(keys, values))
+
+def negative_values(variables, values): # string a diccionario negado
+    keys = [ 'n'+char for char in variables ]
+    values = [ not bool(int(char)) for char in values ]
+    return dict(zip(keys, values))
+
+def function_values():
+    return { "n": lambda x: not x }
+
+def generate_values(variables, values): # unir los 3 diccionarios
+    return { **positive_values(variables, values),
+             **negative_values(variables, values),
+             **function_values() }
 
 def eval_function(function, values):
-    return eval( "int(bool(" + function.replace("-","n") + "))", values )
+    return str(eval( "int(bool(" + function.replace("-","n") + "))", values ))
 
 def tabla_verdad(variables, function, orden):
-    for v in orden(len(variables.split(","))):
-        print(v, eval_function(function, generate_values(variables,v)))
+    for v in orden(len(variables)):
+        print(v, "|", eval_function(function, generate_values(variables,v)))
 
-print("")
-print("1. gray / 2.binario")
-print("")
-ordenado = int(input(" Ordenado: "))
-variables =    input("Variables? ")
-funcion =      input("  Funcion? ")
-print("")
+def x():
+    print("")
+    print("Tablas de verdad")
+    print("")
+    print("1.gray / 2.binario")
+    print("")
+    print("Ordenado?")
+    ordenado = int(input())
+    print("Variables?")
+    variables = input()
+    print("Funcion?")
+    funcion = input()
+    print("")
+    print(variables,"| o")
+    print("-" * len(variables) + "-+---" )
+    if(ordenado==1):
+        tabla_verdad(variables, funcion, gray)
+    else:
+        tabla_verdad(variables, funcion, binary)
 
-if(ordenado==1):
-    tabla_verdad(variables, funcion, gray)
-else:
-    tabla_verdad(variables, funcion, binary)
+x()

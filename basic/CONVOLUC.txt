@@ -1,0 +1,33 @@
+'ProgramMode:RUN
+"CONV. DE SE_#E52B_ALES"
+""
+"F_@E773_"?->F
+"A(T)"?->List A
+"B(T)"?->List B
+
+List->Mat(List A)->Mat A
+List->Mat(List B)->Mat B
+
+Mat A*Trn (Mat B)->Mat CDisps
+
+
+
+Dim List B->W
+Dim List A->H
+(W+H-1+2)->R
+
+{R,1}->Dim Mat R
+Fill(0,Mat R)
+
+For 1->G To H Step 1
+For 1->H To W Step 1
+(G+H-1+1)->R
+Mat R[R,1]+Mat C[G,H]->Mat R[R,1]
+Next
+Next
+
+Mat RDisps
+Mat R*(1fracF)->Mat R
+Mat->List(Mat R,1)->List C
+
+List CDisps
