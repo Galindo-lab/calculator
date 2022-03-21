@@ -7,7 +7,7 @@ def bin(number,digits):
 
 def gray(n):
     # Source: https://www.w3schools.com/python/ref_string_format.asp
-    # genera una lista con los numeros de gray de 'n' bits 
+    # genera una lista con los numeros de gray de 'n' bits
     return [bin(i^(i>>1),n) for i in range(0,1<<n)]
 
 def binary(n):
@@ -28,9 +28,17 @@ def function_values():
     return { "n": lambda x: not x }
 
 def generate_values(variables, values): # unir los 3 diccionarios
-    return { **positive_values(variables, values),
-             **negative_values(variables, values),
-             **function_values() }
+    a = positive_values(variables, values)
+    b = negative_values(variables,values)
+    c = function_values()
+    o = dict({})
+    for key, value in a.items():
+        o[key] = value
+    for key, value in b.items():
+        o[key] = value
+    for key, value in c.items():
+        o[key] = value
+    return o
 
 def eval_function(function, values):
     return str(eval( "int(bool(" + function.replace("-","n") + "))", values ))
